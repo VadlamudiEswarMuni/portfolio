@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,9 +9,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   background: #020b5c;
-  font-family: sans-serif;
+  color: white;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 * {
