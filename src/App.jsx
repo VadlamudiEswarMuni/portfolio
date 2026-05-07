@@ -8,23 +8,15 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#020b3d] text-white overflow-x-hidden">
-
-      <About />
-
+    <>
+      <Hero />
       <Skills />
-
-      <Projects />
-
       <Experience />
-
+      <Projects />
       <Education />
-
-      <Achievements />
-
+      <Contact />
       <Footer />
-
-    </div>
+    </>
   );
 }
 
