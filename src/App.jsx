@@ -8,29 +8,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#030712] text-white overflow-x-hidden">
-
-      {/* Hero Section */}
+    <div className="bg-[#020b3d] text-white overflow-x-hidden">
       <About />
-
-      {/* Skills */}
       <Skills />
-
-      {/* Projects */}
       <Projects />
-
-      {/* Experience */}
       <Experience />
-
-      {/* Education */}
       <Education />
-
-      {/* Achievements */}
       <Achievements />
-
-      {/* Footer */}
       <Footer />
-
     </div>
   );
 }
