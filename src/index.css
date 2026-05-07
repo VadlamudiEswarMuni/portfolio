@@ -1,20 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #020b3d;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  color: white;
+  background: #020b5c;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
