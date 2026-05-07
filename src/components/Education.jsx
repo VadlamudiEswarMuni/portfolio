@@ -1,98 +1,86 @@
 import React from "react";
-import { motion } from "framer-motion";
-
-const educationData = [
-  {
-    title: "Bachelor of Technology (B.Tech)",
-    school: "Vel Tech University",
-    stream: "Computer Science Engineering",
-    year: "2022 - 2026",
-    score: "CGPA: Add Your Score Here",
-    description:
-      "Completed B.Tech in Computer Science Engineering with strong interest in Full Stack Web Development, Frontend Technologies, Backend Development, UI/UX Design, and scalable modern applications.",
-  },
-
-  {
-    title: "Intermediate",
-    school: "MPC Stream",
-    stream: "Mathematics, Physics & Chemistry",
-    year: "2020 - 2022",
-    score: "Percentage: Add Your Score Here",
-    description:
-      "Completed Intermediate education with focus on analytical thinking, mathematics, and problem-solving skills.",
-  },
-
-  {
-    title: "SSC / 10th Class",
-    school: "Secondary School Education",
-    stream: "General Education",
-    year: "2019 - 2020",
-    score: "GPA: Add Your Score Here",
-    description:
-      "Successfully completed secondary school education with good academic performance and foundational knowledge.",
-  },
-];
 
 const Education = () => {
-  return (
-    <section className="py-16 bg-[#03114f] text-white">
+  const educationData = [
+    {
+      degree: "Bachelor of Technology (B.Tech)",
+      institution: "Vel Tech University",
+      field: "Computer Science & Engineering",
+      year: "2021 - 2025",
+      score: "CGPA: 6.95 / 10",
+      description:
+        "Completed Bachelor of Technology in Computer Science & Engineering with strong interest in Full Stack Development, Frontend Technologies, Backend Development, and scalable modern web applications.",
+    },
 
-      <div className="max-w-6xl mx-auto px-6">
+    {
+      degree: "Intermediate",
+      institution: "MPC Stream",
+      field: "Mathematics, Physics & Chemistry",
+      year: "2019 - 2021",
+      score: "Percentage: 66%",
+      description:
+        "Completed Intermediate education with focus on analytical thinking, mathematics, and problem-solving skills.",
+    },
+
+    {
+      degree: "SSC / 10th Class",
+      institution: "Secondary School Education",
+      field: "State Board",
+      year: "2018 - 2019",
+      score: "GPA: 9.0 / 10",
+      description:
+        "Successfully completed secondary school education with excellent academic performance and strong foundational knowledge.",
+    },
+  ];
+
+  return (
+    <section className="py-20 px-6 bg-[#020b5c] text-white">
+
+      <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-center mb-3 bg-gradient-to-r from-cyan-400 via-emerald-400 to-yellow-300 bg-clip-text text-transparent"
-        >
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 bg-gradient-to-r from-cyan-400 via-pink-400 to-yellow-300 bg-clip-text text-transparent">
           Education
-        </motion.h2>
+        </h2>
 
-        {/* Subtitle */}
-        <p className="text-center text-gray-300 mb-12 text-lg">
-          My academic background and learning journey.
+        <p className="text-center text-gray-300 text-lg mb-16">
+          My academic background and educational journey.
         </p>
 
-        {/* Education Cards */}
-        <div className="space-y-8">
+        {/* Cards */}
+        <div className="space-y-10">
 
           {educationData.map((edu, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{
-                scale: 1.02,
-                y: -4,
-              }}
-              transition={{ duration: 0.4 }}
-              className="bg-[#11206b] border border-cyan-500 rounded-3xl p-8 shadow-xl hover:shadow-cyan-500/40"
+              className="bg-[#12206f] border border-cyan-500 rounded-3xl p-8 shadow-lg hover:scale-[1.02] transition duration-300"
             >
-              <h3 className="text-3xl font-bold text-cyan-300">
-                {edu.title}
+
+              <h3 className="text-3xl font-bold text-cyan-400 mb-2">
+                {edu.degree}
               </h3>
 
-              <p className="text-emerald-300 text-xl mt-2">
-                {edu.school}
+              <h4 className="text-pink-400 text-xl mb-2">
+                {edu.institution}
+              </h4>
+
+              <p className="text-yellow-300 font-semibold mb-2">
+                {edu.field}
               </p>
 
-              <p className="text-yellow-300 mt-2">
-                {edu.stream}
-              </p>
-
-              <p className="text-gray-300 mt-2">
-                {edu.year}
-              </p>
-
-              <p className="text-cyan-200 mt-2 font-semibold">
+              <p className="text-green-400 font-semibold mb-2">
                 {edu.score}
               </p>
 
-              <p className="text-gray-300 leading-8 mt-5">
+              <p className="text-gray-400 mb-4">
+                📅 {edu.year}
+              </p>
+
+              <p className="text-gray-300 leading-8 text-lg">
                 {edu.description}
               </p>
-            </motion.div>
+
+            </div>
           ))}
 
         </div>
